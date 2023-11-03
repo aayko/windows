@@ -5,3 +5,5 @@ function Prompt {
 	$prompt = '>'
 	return "$currentDir $prompt "
 }
+
+Set-Alias -name v -value nvim
