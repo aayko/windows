@@ -3,18 +3,14 @@
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
+    {
+      "command": "unbound",
+      "keys": "ctrl+c"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+v"
+    },
         {
             "command": "find",
             "keys": "ctrl+shift+f"
@@ -27,13 +23,17 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
+        },
+        {
+            "command": "toggleFocusMode",
+            "keys": "alt+f"
         }
     ],
     "alwaysShowTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-    "launchMode": "focus",
+    "defaultProfile": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+    "launchMode": "maximizedFocus",
     "profiles": 
     {
         "defaults": {},
@@ -80,6 +80,21 @@
                 "name": "PowerShell",
                 "padding": "16",
                 "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "bellStyle": "none",
+                "cursorShape": "filledBox",
+                "font": 
+                {
+                    "face": "FiraCode Nerd Font",
+                    "size": 16
+                },
+                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+                "hidden": false,
+                "name": "Arch",
+                "padding": "16",
+                "scrollbarState": "hidden",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
@@ -130,6 +145,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
+        },
+        {
+            "background": "#080808",
+            "black": "#555555",
+            "blue": "#777777",
+            "brightBlack": "#555555",
+            "brightBlue": "#777777",
+            "brightCyan": "#4C9E70",
+            "brightGreen": "#669B59",
+            "brightPurple": "#9E4C9E",
+            "brightRed": "#CC3333",
+            "brightWhite": "#CCCCCC",
+            "brightYellow": "#C2AB29",
+            "cursorColor": "#CCCCCC",
+            "cyan": "#4C9E70",
+            "foreground": "#CCCCCC",
+            "green": "#669B59",
+            "name": "Kitty",
+            "purple": "#9E4C9E",
+            "red": "#CC3333",
+            "selectionBackground": "#CCCCCC",
+            "white": "#CCCCCC",
+            "yellow": "#C2AB29"
         },
         {
             "background": "#282C34",
