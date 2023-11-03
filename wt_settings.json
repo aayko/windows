@@ -3,14 +3,14 @@
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
-    {
-      "command": "unbound",
-      "keys": "ctrl+c"
-    },
-    {
-      "command": "unbound",
-      "keys": "ctrl+v"
-    },
+        {
+            "command": "unbound",
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+v"
+        },
         {
             "command": "find",
             "keys": "ctrl+shift+f"
@@ -58,16 +58,6 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "colorScheme": "Campbell",
-                "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-                "cursorShape": "filledBox",
-                "guid": "{457957f9-4333-4d3f-80dc-6a31bff58966}",
-                "hidden": false,
-                "name": "Powershell",
-                "padding": "16",
-                "scrollbarState": "hidden"
-            },
-            {
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -nologo",
                 "cursorShape": "filledBox",
                 "font": 
@@ -83,6 +73,7 @@
             },
             {
                 "bellStyle": "none",
+                "colorScheme": "Kitty",
                 "cursorShape": "filledBox",
                 "font": 
                 {
@@ -94,7 +85,8 @@
                 "name": "Arch",
                 "padding": "16",
                 "scrollbarState": "hidden",
-                "source": "Windows.Terminal.Wsl"
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "/mnt/c/Users/ayko"
             }
         ]
     },
