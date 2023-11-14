@@ -1,22 +1,28 @@
-﻿; Toggle the Windows 11 taskbar with Ctrl+Shift+Alt+T
+﻿; Set up the script to run at startup
+#NoTrayIcon
+#NoEnv
+SendMode Input
+SetWorkingDir %A_ScriptDir%
 
-; Set the key combination to trigger the taskbar toggle
-^+!t::ToggleTaskbar()
+; Run once at script startup
+OnStartup:
+    WinSet, Transparent, 0, ahk_class Shell_TrayWnd
+    Return
 
-; Function to toggle the taskbar
-ToggleTaskbar() {
-    ; Check if the taskbar is currently hidden
-    if (WinExist("ahk_class Shell_TrayWnd")) {
-        ; If it's visible, hide the taskbar
-        WinHide, ahk_class Shell_TrayWnd
-        WinHide, ahk_class Shell_SecondaryTrayWnd
-    } else {
-        ; If it's hidden, show the taskbar
-        WinShow, ahk_class Shell_TrayWnd
-        WinShow, ahk_class Shell_SecondaryTrayWnd
-    }
+; toggle taskbar on and off using hot key
+; Control + Shift + Alt + T
+
+^+!t::            ; ToggleTaskbar()
+If Transparent := !Transparent
+{
+    WinSet, Transparent, 0, ahk_class Shell_TrayWnd
 }
+Else
+{
+    WinSet, Transparent, 255, ahk_class Shell_TrayWnd
+    WinSet, TransColor, OFF, ahk_class Shell_TrayWnd
+    WinSet, Transparent, OFF, ahk_class Shell_TrayWnd
+    WinSet, Redraw,, ahk_class Shell_TrayWnd
+}
+Return
 
-; Hide the taskbar when the script is initially run
-WinHide, ahk_class Shell_TrayWnd
-WinHide, ahk_class Shell_SecondaryTrayWnd
